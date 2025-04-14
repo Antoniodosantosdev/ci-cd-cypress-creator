@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    /* fundo escuro */
+    color: #fff;
+    /* Texto branco */
+    line-height: 1.6
+        /* Espaçamento entre linhas */
+}
+
+/* Estilo do menu fixo */
+
+.menu {
+    background-color: #333;
+    /* Cor de fundo do menu */
+    position: sticky;
+    /* Fixa o menu no topo da página */
+    top: 0;
+    /* Fixa o menu no topo */
+    z-index: 1000;
+    /* Garante que o menu fique acima de outros elementos */
+    width: 100%;
+    /* Largura total */
+    padding: 10px 0;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    /* Sombra para dar profundidade */
+
+}
+
+.menu ul {
+    list-style-type: none;
+    /* Remove os marcadores da lista */
+    margin: 0;
+    /* Remove a margem */
+    padding: 0;
+    /* Remove o preenchimento */
+
+}
+
+.menu ul li {
+    display: inline-block;
+    /* Exibe os itens em linha */
+    margin: 0 15px;
+    /* Espaçamento entre os itens */
+}
+
+.menu ul li a {
+    color: #4CAF50;
+    /* Cor do texto dos links */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    font-size: 18px;
+    /* Tamanho da fonte */
+    transition: color 0.4;
+    /* Transição suave para a cor */
+
+}
+
+.menu ul li a:hover {
+    color: #fff;
+    /* Cor do texto ao passar o mouse */
+    text-decoration: underline;
+    /* Sublinha o texto ao passar o mouse */
+}
+
+.inicio {
+    background-color: #1e1e1e;
+    /* Cor de fundo da seção */
+
+}
+
+.sobre {
+    background-color: #242424;
+    /* Cor de fundo da seção */
+}
+
+.contato {
+    background-color: #2c2c2c;
+    /* Cor de fundo da seção */
+}
+
+/* efeitos e estilos */
+
+h1,
+h2,
+h3 {
+    color: #4CAF50;
+    /* Cor dos títulos */
+
+}
+
+p {
+    font-size: #cc0000;
+    /* Tamanho da fonte dos parágrafos */
+}
+
+.fa-github {
+    color: #fbfbfb
+        /* Cor do ícone do GitHub */
+}
+
+.fa-linkedin {
+    color: #8684f5;
+    /* Cor do ícone do LinkedIn */
+}
+
+.icons-social i {
+    font-size: 4em;
+    /* Tamanho dos ícones sociais */
+}
+
+.icons-social i {
+    padding: 10px;
+    /* Espaçamento interno dos ícones */
+}
+
+.icons-social a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+}
