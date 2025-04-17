@@ -1,0 +1,23 @@
+{
+  "name": "ci-cd-cypress-creator",
+  "version": "1.0.0",
+  "description": "O primeiro passo é criar um repositório no GitHub para armazenar o código-fonte e a estrutura do projeto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoniodosantosdev/ci-cd-cypress-creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoniodosantosdev/ci-cd-cypress-creator/issues"
+  },
+  "homepage": "https://github.com/Antoniodosantosdev/ci-cd-cypress-creator#readme",
+  "devDependencies": {
+    "cypress": "^14.3.0"
+  }
+}

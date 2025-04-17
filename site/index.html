@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Meus Testes</title>
-
-
+  <!-- Define a codificação de caracteres e a responsividade para dispositivos móveis -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Importa o Font Awesome para ícones -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  
+  <!-- Importa o arquivo de estilos CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <!-- Título da página -->
+  <title>Meus Testes</title>
 </head>
-
 <body>
-
-    <div class="container" id="container" >
-
-        <!--Criar Formulário de Cadastro-->
-        <div class="form-container sign-up-container">
-            <form action="javascript:void(0)">
-                <h1>Criar Conta</h1>
-                <div class="social-container">
-                    <a href="https://www.github.com/login" class="social"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>Ou use um email para Cadastrar</span>
-                <input type="text" placeholder="Name" aria-label="Full Name" />
-                <input type="email" id="email" placeholder="Email" aria-label="Email Address" />
-                <div class="password-container">
-                    <input type="password" id="password1" placeholder="Password" aria-label="Password" />
-                    <button type="button" id="togglePassword1" class="eye-icon">
-                        <i class="fas fa-eye"></i>
+  <!-- Container principal que envolve todo o conteúdo do formulário -->
+  <div class="container" id="container">
+    
+    <!-- Formulário de Cadastro (Criação de Conta) -->
+    <div class="form-container sign-up-container">
+      <form action="javascript:void(0)">
+        <!-- Título do formulário -->
+        <h1>Criar Conta</h1>
         
-                    </button>
-                </div>
-                <button>Entrar</button>
-            </form>
+        <!-- Seção para ícones sociais (GitHub, LinkedIn) -->
+        <div class="social-container">
+          <a href="https://www.github.com/login" class="social"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
-
-        <!--Criar Formulário de Login-->
-        <div class="form-container sign-in-container">
-            <form action="javascript:void(0)">
-                    <h1>Entrar</h1>
-                    <div class="socialcontainer">
-                        <a href="https://www.github.com/login" class="social"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    </div>
-                    <span>Ou use sua conta</span>
-                    <input type="email" id="username" placeholder="Email" aria-label="Email Address" />
-                    <div class="password-container">
-                        <input type="password" id="password2" placeholder="Password" aria-label="Password" />
-                        <button type="button" id="togglePassword2" class="eye-icon">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                    <a href="#">Você esqueceu sua senha ?</a>
-                    <button type="button" id="button" onclick="login()">Entrar</button>
-                    <div id="error-message"></div>
-            </form>
+        
+        <!-- Texto para indicar o uso de email -->
+        <span>Ou use um email para Cadastrar agora</span>
+        
+        <!-- Campo de entrada para nome -->
+        <input type="text" placeholder="Name" aria-label="Full Name" />
+        
+        <!-- Campo de entrada para email -->
+        <input type="email" id="email" placeholder="Email" aria-label="Email Address" />
+        
+        <!-- Container para o campo de senha com botão para alternar visibilidade -->
+        <div class="password-container">
+          <!-- Campo de entrada para senha -->
+          <input type="password" id="password1" placeholder="Password" aria-label="Password" />
+          <!-- Botão com ícone de olho que permite mostrar/ocultar a senha -->
+          <button type="button" id="togglePassword1" class="eye-icon">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+        
+        <!-- Botão para submeter o formulário de cadastro -->
+        <button>Entrar</button>
+      </form>
     </div>
-    <!--Overlay para transição-->
+
+    <!-- Formulário de Login -->
+    <div class="form-container sign-in-container">
+      <form action="javascript:void(0)">
+        <!-- Título do formulário -->
+        <h1>Entrar</h1>
+        
+        <!-- Seção para ícones sociais (GitHub, LinkedIn) – OBS.: mesma classe utilizada no cadastro -->
+        <div class="social-container">
+          <a href="https://www.github.com/login" class="social"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <!-- Texto para indicação do uso de conta existente -->
+        <span>Ou use sua conta</span>
+        
+        <!-- Campo de entrada para email -->
+        <input type="email" id="username" placeholder="Email" aria-label="Email Address" />
+        
+        <!-- Container para o campo de senha e botão de alternar visibilidade -->
+        <div class="password-container">
+          <!-- Campo de entrada para senha -->
+          <input type="password" id="password2" placeholder="Password" aria-label="Password" />
+          <!-- Botão com ícone para visualizar/ocultar senha -->
+          <button type="button" id="togglePassword2" class="eye-icon">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+        
+        <!-- Link para recuperar senha -->
+        <a href="#">Você esqueceu sua senha ?</a>
+        
+        <!-- Botão que, ao clicar, executa a função de login (definida no arquivo JavaScript "login.js") -->
+        <button type="button" id="button" onclick="login()">Entrar</button>
+        
+        <!-- Container para exibir mensagens de erro -->
+        <div id="error-message"></div>
+      </form>
+    </div>
+
+    <!-- Container de overlay para transição entre os formulários -->
     <div class="overlay-container">
-        <div class="overlay">
-            <div class="overlay-panel overlay-left">
-                <h1>Bem vindo de volta</h1>
-                <p>para continuar conectado conosco, faça login com suas informações pessoais.</p>
-                <button class="ghost" id="signin">Entrar</button>
-            </div>
-            <div class="overlay-panel overlay-right">
-                <h1>Testes QA</h1>
-                <p>insira seus dados pessoais e comece sua jornada conosco.</p>
-                <button class="ghost" id="signUp">Inscrever-se</button>
-            </div>
+      <div class="overlay">
+        <!-- Painel do overlay para usuários que já possuem conta (login) -->
+        <div class="overlay-panel overlay-left">
+          <h1>Bem vindo de volta</h1>
+          <p>Para continuar conectado conosco, faça login com suas informações pessoais.</p>
+          <button class="ghost" id="signin">Entrar</button>
         </div>
+        <!-- Painel do overlay para usuários que desejam se cadastrar -->
+        <div class="overlay-panel overlay-right">
+          <h1>Testes QA</h1>
+          <p>Insira seus dados pessoais e comece sua jornada conosco.</p>
+          <button class="ghost" id="signUp">Inscrever-se</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <footer>
-        <p>
-            Creado por <i class="fa fa-heart"></i> Antonio Carlos 
-            <a target="_blank" href="https://github.com/Antoniodosantosdev">QA TESTES</a>
-            - leia como eu criei isso e como você pode participar.
-            <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slide-sign-in-up-form/">Aqui</a>.
-        </p>
-    </footer>
+  <!-- Rodapé da página com créditos e links adicionais -->
+  <footer>
+    <p>
+      Criado por <i class="fa fa-heart"></i> Antonio Carlos 
+      <a target="_blank" href="https://github.com/Antoniodosantosdev">QA TESTES</a>
+      - Leia como eu criei isso e como você pode participar.
+      <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slide-sign-in-up-form/">Aqui</a>.
+    </p>
+  </footer>
 
-    <script src="login.js"></script>
-
+  <!-- Script contendo as funções de interação, como o login e possivelmente a alternância de visibilidade das senhas -->
+  <script src="login.js"></script>
 </body>
-        
 </html>
