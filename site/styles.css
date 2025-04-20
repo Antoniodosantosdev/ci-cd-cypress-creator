@@ -96,7 +96,7 @@ form {
 
 /* Estilo para inputs de texto e outros */
 input {
-	background-color: #f5e0e0; /* Fundo de cor suave para inputs */
+	background-color: #eecfcf; /* Fundo de cor suave para inputs */
 	border: none; /* Sem borda */
 	padding: 12px 15px; /* Espaçamento interno */
 	margin: 8px 0; /* Margem vertical */
@@ -330,7 +330,7 @@ input[type="password"] {
     padding: 12px 15px 12px 15px; /* Padding com espaço para o ícone */
     padding-right: 40px; /* Espaço extra à direita para o botão */
     position: relative;
-    background-color: #f5e0e0; /* Fundo suave para o input */
+    background-color: #eecfcf; /* Fundo suave para o input */
     border: none;
 }
 
