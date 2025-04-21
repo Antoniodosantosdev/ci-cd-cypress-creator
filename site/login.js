@@ -11,7 +11,7 @@ signUpButton.addEventListener('click', () => {
 // Função para carregar os usuários e senhas do arquivo JSON
 
 function loadUsers() {
-  return fetch("users.json")
+  return fetch("user.json")
     .then((response) => response.json())
 
     .catch((error) => {
