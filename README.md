@@ -110,20 +110,26 @@ A instalação do Cypress permitirá rodar testes automatizados para garantir qu
 
 Com base nos requisitos, crie os cenários de teste para validar as funcionalidades. Alguns exemplos de cenários podem ser:
 
-- **Cenário 1:** Teste de Login com credenciais válidas.
-- **Cenário 2:** Teste de Login com email inválido.
-- **Cenário 3:** Teste de Login com senha incorreta.
-- **Cenário 4:** Teste de Login com campos vazios.
-- **Cenário 5:** Teste de Login com email e senha vazios.
+- **Cenário 1:** Teste de Login Campos vazios.
+- **Cenário 2:** Teste de Login E-mail Válido e Senha Inválida.
+- **Cenário 3:** Teste de Login com E-mail Inválido e Senha Válida.
+- **Cenário 4:** Teste de Login com Ambos Inválidos.
+- **Cenário 5:** Teste de Login com Ambos Válidos.
+- **Cenário 6:** Teste de Login com Alternar visibilidade da senha.
+- **Cenário 7:** Teste de Login com Enter no campo senha.
+- **Cenário 8:** Teste de Login com Redirecionamento após login bem-sucedido.
+- **Cenário 9:** Teste de Login com Mensagem de erro some após dados válidos.
+- **Cenário 10:** Teste de Login com Elementos da tela de login existem.
 
 ### Exemplo de teste Cypress (Login com credenciais válidas):
 ```javascript
-it('Login Válido', () => {
-      cy.get('#username').type('usuario@example.com');
-      cy.get('#password2').type('1q2w3e4r'); 
-      cy.get('#button').click();
-      cy.contains('Bem-vindo').should('be.visible');
-    });
+  it("Cenário 5: Ambos Válidos", () => {
+    cy.get("#username").type("usuario@example.com");
+    cy.get("#password2").type("1q2w3e4r");
+    cy.get("#button").click();
+    cy.url().should("include", "welcome/index.html");
+    cy.contains("Bem vindo").should("be.visible");
+  });
 ```
 
 ---
